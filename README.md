@@ -10,9 +10,9 @@ Lets send that up to Google Big Query to augment and compliment the rest of our 
 
 
 ## Why
-* Were capturing a wealth of transactional Healthcare data in our IRIS for Health clusters.  From EDI/X12, HL7, FHIR, CCDA and even SDA to any other data exhaust we are persisting along the way.
+* Were capturing a wealth of transactional Healthcare data in our IRIS for Health clusters. 
 * Our Data Warehouse is in Google Cloud Platform Big Query (GCP).
-* Our Data Science team asked us to ETL (Extract, Transform, Load) it to Big Query, so they can ELT (Extract, Load, then Transform) and join their data.
+* Our Data Science team asked us to put in a process to automatically send transactional data to the Data Warehouse.
 
 ## Who
 
