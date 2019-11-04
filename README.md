@@ -69,10 +69,10 @@ GOOGLE_CLOUD_PROJECT=iris2bq-demo GOOGLE_APPLICATION_CREDENTIALS=/path/to/servic
 ```
 - Done!
 
-Add this to a scheduler (Airflow, crontab, etc) every 10min and enjoy your JOINs in BigQuery.
+Add this to a scheduler (Airflow, crontab, etc) every 10min and enjoy your JOINs in BigQuery of your IRIS Data.
 
 
-## Give this a shot locally.
+## Give this a shot yourself
 
 If you want to give this a shot on your own, here is a quick way to get up and running with InterSystems IRIS for Health.  You will need Docker installed on your system.
 
@@ -116,9 +116,11 @@ Got a better idea?  See a horrific bug? Grab `sbt` for your system.
 </details>
 
 
+## Thank You
 
-[Travis CI]: https://github.com/dwyl/learn-travis
-[Storeon]: https://github.com/ai/storeon/
-[Nano ID]: https://github.com/ai/nanoid/
-[React]: https://github.com/facebook/react/
+Thanks to our valued partners InterSystems and Google Cloud Platform for the feedback and support.  
 
+## Credits
+
+We dont pretend to be very good at Scala.  Most of the original guts of this thing come out of the great work
+of these hackers at Powerspace.  We have used a similar version of this for Postgres to lift transactional data a datawarehouse for a customer without.
