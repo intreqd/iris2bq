@@ -1,0 +1,1 @@
+sudo docker run --name iris-health -d --publish 51773:51773 --publish 52773:52773 store/intersystems/irishealth-community:2019.4.0.379.0
