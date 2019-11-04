@@ -17,8 +17,8 @@ Lets send that up to Google Big Query to augment and compliment the rest of our 
 
 ###  Technical Actors
 
-* [InterSystems IRIS for Health](https://github.com/mobxjs/mobx)
-* [Google Cloud Platform - Big Query](https://github.com/callemall/material-ui)
+* [InterSystems IRIS for Health](https://www.intersystems.com/resources/detail/intersystems-iris-for-health/)
+* [Google Cloud Platform - Big Query](https://cloud.google.com/bigquery/)
 
 
 ## How
@@ -44,7 +44,7 @@ Exactly how again?
 ## Let's Go
 
 ### How to run it
-
+- Ensure you have a Java SDK on your system `OpenJDK1.8` worked for us.
 - Create a Service Account to Google Cloud which has access to GCS and BigQuery, and create a json key
 - Create a configuration file `configuration.conf` for iris2bq to know where to grab and put the data:
 ```
@@ -72,7 +72,7 @@ GOOGLE_CLOUD_PROJECT=iris2bq-demo GOOGLE_APPLICATION_CREDENTIALS=/path/to/servic
 Add this to a scheduler (Airflow, crontab, etc) every 10min and enjoy your JOINs in BigQuery.
 
 
-### Give this a shot.
+## Give this a shot locally.
 
 If you want to give this a shot on your own, here is a quick way to get up and running with InterSystems IRIS for Health.  You will need Docker installed on your system.
 
@@ -97,6 +97,23 @@ If you want to give this a shot on your own, here is a quick way to get up and r
 
 </details>
 
+### Development
+
+Got a better idea?  See a horrific bug? Grab `sbt` for your system.
+
+<details><summary><b>Show iris2bq Development Instructions</b></summary>
+
+1. Build:
+
+    ```sh
+    $ git clone https://github.com/basenube/iris2bq.git
+    $ cd iris2bq
+    // Develop, Develop, Develop
+    $ sbt stage
+    ```
+
+
+</details>
 
 
 
