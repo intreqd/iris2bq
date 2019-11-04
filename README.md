@@ -1,7 +1,7 @@
 # iris2bq - A utility to move InterSystems IRIS Data to Google Cloud Platform's Big Query
 <img src="https://img.shields.io/badge/InterSystems-iris-turquoise.svg?longCache=true&amp;style=for-the-badge" alt="InterSystems IRIS" style="margin-bottom: -8px"> <img src="https://img.shields.io/badge/gcp-Big%20Query-blue.svg?longCache=true&amp;style=for-the-badge" alt="For The Badge" style="margin-bottom: -8px"><br/>
 
-<img src="https://via.placeholder.com/178x178.png?text=WorkloadLogo" align="right">
+<img src="docs/assets/Deck-Gif.gif" align="right">
 
 ## What
 Let's say IRIS is contributing to workload for a Hospital system, marshalling DICOM, HL7, FHIR, or CCDA.  Natively, IRIS persists these objects in various stages of the pipeline via the nature of the business processes and anything you included along the way.
@@ -10,8 +10,9 @@ Lets send that up to Google Big Query to augment and compliment the rest of our 
 
 
 ## Why
-* Were capturing a 
+* Were capturing a wealth of transactional Healthcare data in our IRIS for Health clusters.  From EDI/X12, HL7, FHIR, CCDA and even SDA to any other data exhaust we are persisting along the way.
 * Our Data Warehouse is in Google Cloud Platform Big Query (GCP).
+* Our Data Science team asked us to ETL (Extract, Transform, Load) it to Big Query, so they can ELT (Extract, Load, then Transform) and join their data.
 
 ## Who
 
@@ -24,7 +25,7 @@ Lets send that up to Google Big Query to augment and compliment the rest of our 
 ## How
 This `iris2bq` utility has got your back.
 <p align="center">
-  <img src="https://via.placeholder.com/748X368.png?text=Reference Architecture">
+  <img src="docs/assets/iris2bq-ra.png">
 </p>
 
 Exactly how again?
@@ -118,9 +119,9 @@ Got a better idea?  See a horrific bug? Grab `sbt` for your system.
 
 ## Thank You
 
-Thanks to our valued partners InterSystems and Google Cloud Platform for the feedback and support.  
+Thanks to our valued partners [InterSystems](https://www.intersystems.com) and [Google Cloud Platform](https://cloud.google.com) for the feedback and support.  
 
 ## Credits
 
 We dont pretend to be very good at Scala.  Most of the original guts of this thing come out of the great work
-of these hackers at Powerspace.  We have used a similar version of this for Postgres to lift transactional data to a datawarehouse for a customer without issue for over a year now.
+of these hackers at [Powerspace](https://powerspace.com/en/).  We have used a similar version of this they developed for Postgres to lift transactional data to a datawarehouse for a customer without issue for over a year now.
