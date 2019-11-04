@@ -5,7 +5,9 @@ import com.google.cloud.bigquery._
 import com.typesafe.scalalogging.LazyLogging
 import org.apache.spark.sql.{DataFrame, SaveMode, SparkSession}
 
-class BigQueryImporter(spark: SparkSession, tmpBucket: String, dataset: String) extends LazyLogging with DataImporter {
+class BigQueryImporter(spark: SparkSession, tmpBucket: String, dataset: String)
+    extends LazyLogging
+    with DataImporter {
 
   val bigquery: BigQuery = BigQueryOptions.getDefaultInstance.getService
 
@@ -19,14 +21,16 @@ class BigQueryImporter(spark: SparkSession, tmpBucket: String, dataset: String) 
 
   private def loadFromGcsToBq(tableName: String): Unit = {
     val configuration = LoadJobConfiguration
-      .builder(TableId.of(dataset, tableName), s"gs://$tmpBucket/$tableName/*.avro")
+      .builder(TableId.of(dataset, tableName),
+               s"gs://$tmpBucket/$tableName/*.avro")
       .setFormatOptions(FormatOptions.avro())
       .setWriteDisposition(WriteDisposition.WRITE_TRUNCATE)
       .build()
 
     val job = bigquery.create(JobInfo.newBuilder(configuration).build())
 
-    logger.info(s"Importing $tableName from bucket $tmpBucket to dataset $dataset...")
+    logger.info(
+      s"Importing $tableName from bucket $tmpBucket to dataset $dataset...")
     job.waitFor()
     logger.info(s"$tableName import done!")
   }

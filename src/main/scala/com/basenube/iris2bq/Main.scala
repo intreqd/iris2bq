@@ -10,7 +10,8 @@ object Main extends App with LazyLogging {
 
   loadConfig[ApplicationConfig](ConfigFactory.load()) match {
     case Left(failures: ConfigReaderFailures) =>
-      logger.error(s"Incorrect configuration: ${failures.toList.mkString(", ")}")
+      logger.error(
+        s"Incorrect configuration: ${failures.toList.mkString(", ")}")
     case Right(config) =>
       Worker.start(config)
   }

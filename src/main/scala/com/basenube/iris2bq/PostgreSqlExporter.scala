@@ -5,7 +5,8 @@ import java.util.Properties
 import com.basenube.iris2bq.config.JdbcConfiguration
 import org.apache.spark.sql.{DataFrame, SparkSession}
 
-class IRISJDBCExporter(spark: SparkSession, jdbc: JdbcConfiguration) extends DataExporter {
+class IRISJDBCExporter(spark: SparkSession, jdbc: JdbcConfiguration)
+    extends DataExporter {
 
   val props = new Properties()
   props.put("user", jdbc.user)

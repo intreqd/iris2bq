@@ -45,14 +45,15 @@ Exactly how again?
 ## Let's Go
 
 ### How to run it
-- Ensure you have a Java SDK on your system `OpenJDK1.8` worked for us.
-- Create a Service Account to Google Cloud which has access to GCS and BigQuery, and create a json key
-- Create a configuration file `configuration.conf` for iris2bq to know where to grab and put the data:
+- :coffee: Ensure you have a Java SDK on your system `OpenJDK1.8` worked for us.
+- :arrow_down: Download the latest release [iris2bq](https://github.com/basenube/iris2bq/releases/tag/v1.0.5)
+- :cloud: Create a Service Account to Google Cloud which has access to GCS and BigQuery, and create a json key
+- :page_facing_up: Create a configuration file `configuration.conf` for iris2bq to know where to grab and put the data:
 ```
 jdbc {
   url = "jdbc:IRIS://127.0.0.1:51773/USER"
   user = "_SYSTEM"
-  password = "flounder" // This is my personal WIFI password in Gun Lake, feel free to drop by and say "Hi", and use it.  Hi not required either.
+  password = "flounder"
   tables = [ "people" ]
 }
 
