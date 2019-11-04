@@ -123,4 +123,4 @@ Thanks to our valued partners InterSystems and Google Cloud Platform for the fee
 ## Credits
 
 We dont pretend to be very good at Scala.  Most of the original guts of this thing come out of the great work
-of these hackers at Powerspace.  We have used a similar version of this for Postgres to lift transactional data a datawarehouse for a customer without.
+of these hackers at Powerspace.  We have used a similar version of this for Postgres to lift transactional data to a datawarehouse for a customer without issue for over a year now.
