@@ -69,67 +69,36 @@ GOOGLE_CLOUD_PROJECT=iris2bq-demo GOOGLE_APPLICATION_CREDENTIALS=/path/to/servic
 ```
 - Done!
 
-Add this to a scheduler every 10min and enjoy your JOINs in BigQuery.
+Add this to a scheduler (Airflow, crontab, etc) every 10min and enjoy your JOINs in BigQuery.
 
 
-### IRIS for Health
+### Give this a shot.
 
-The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.
+If you want to give this a shot on your own, here is a quick way to get up and running with InterSystems IRIS for Health.  You will need Docker installed on your system.
 
 <details><summary><b>Show IRIS Deployment Instructions</b></summary>
 
 1. Build Container:
 
     ```sh
-    $ docker build -t .
+    $ cd demo
+    $ bash iris-docker.sh
+
     ```
 
-2. Deploy your IRIS for Health Code `package.json`:
-
-    ```diff
-    + "size-limit": [
-    +   {
-    +     "path": "dist/app-*.js"
-    +   }
-    + ],
-      "scripts": {
-        "build": "webpack ./webpack.config.js",
-    +   "size": "npm run build && size-limit",
-        "test": "jest && eslint ."
-      }
-    ```
-
-</details>
-
-
-### Google Cloud Platform DICOM Instance Store
-
-The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.
-
-<details><summary><b>Show instructions</b></summary>
-
-1. Apply Infrastructure:
+2. Create a GCP project with `Big Query` and `Google Cloud Storage` API's enabled:
 
     ```sh
-    $ npm install --save-dev @size-limit/preset-big-lib
-    ```
-
-2. Add the `size-limit` section and the `size` script to your `package.json`:
-
-    ```diff
-    + "size-limit": [
-    +   {
-    +     "path": "dist/react.production-*.js"
-    +   }
-    + ],
-      "scripts": {
-        "build": "webpack ./scripts/rollup/build.js",
-    +   "size": "npm run build && size-limit",
-        "test": "jest && eslint ."
-      }
+    $ cd demo
+    $ terraform init
+    $ terraform plan
+    $ terraform apply
     ```
 
 </details>
+
+
+
 
 [Travis CI]: https://github.com/dwyl/learn-travis
 [Storeon]: https://github.com/ai/storeon/
