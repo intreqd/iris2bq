@@ -1,7 +1,7 @@
 # iris2bq - A utility to move InterSystems IRIS Data to Google Cloud Platform's Big Query
 <img src="https://img.shields.io/badge/InterSystems-iris-turquoise.svg?longCache=true&amp;style=for-the-badge" alt="InterSystems IRIS" style="margin-bottom: -8px"> <img src="https://img.shields.io/badge/gcp-Big%20Query-blue.svg?longCache=true&amp;style=for-the-badge" alt="For The Badge" style="margin-bottom: -8px"><br/>
 
-<img src="docs/assets/Deck-Gif.gif" align="right">
+<img src="docs/assets/iris2bq-logo.png" align="right">
 
 ## What
 Let's say IRIS is contributing to workload for a Hospital system, marshalling DICOM, HL7, FHIR, or CCDA.  Natively, IRIS persists these objects in various stages of the pipeline via the nature of the business processes and anything you included along the way.
