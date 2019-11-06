@@ -90,6 +90,11 @@ If you want to give this a shot on your own, here is a quick way to get up and r
 
 2. Create a GCP project with `Big Query` and `Google Cloud Storage` API's enabled:
 
+    ```
+    gcloud projects create iris2bq-demo--enable-cloud-apis
+    ```
+ 3. -or- try your hand as a Terraformer   
+
     ```sh
     $ cd demo
     $ terraform init
