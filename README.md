@@ -65,6 +65,8 @@ gcloud {
 }
 
 ```
+Up there in the jdbc connection block is where the magic happens for us.  Just specify a list of applicable tables in IRIS for the Namespace you are connecting to (`USER`) and watch the appear in Big Query.
+
 - Run the application specifying the config file:
 ```
 GOOGLE_CLOUD_PROJECT=iris2bq-demo GOOGLE_APPLICATION_CREDENTIALS=/path/to/service-account-key.json ./bin/iris2bq -Dconfig.file=configuration.conf
