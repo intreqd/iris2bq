@@ -1,7 +1,7 @@
 # iris2bq - A utility to move InterSystems IRIS Data to Google Cloud Platform's Big Query
 <img src="https://img.shields.io/badge/InterSystems-iris-turquoise.svg?longCache=true&amp;style=for-the-badge" alt="InterSystems IRIS" style="margin-bottom: -8px"> <img src="https://img.shields.io/badge/gcp-Big%20Query-blue.svg?longCache=true&amp;style=for-the-badge" alt="For The Badge" style="margin-bottom: -8px"><br/>
 
-<img src="docs/assets/iris2bq-logo.png" align="right">
+<img src="https://github.com/basenube/iris2bq/raw/master/docs/assets/iris2bq-logo.png" align="right">
 
 ## What
 Let's say IRIS is contributing to workload for a Hospital system, marshalling DICOM, HL7, FHIR, or CCDA.  Natively, IRIS persists these objects in various stages of the pipeline via the nature of the business processes and anything you included along the way.
@@ -25,7 +25,7 @@ Lets send that up to Google Big Query to augment and compliment the rest of our 
 ## How
 This `iris2bq` utility has got your back.
 <p align="center">
-  <img src="docs/assets/iris2bq-ra.png">
+  <img src="https://github.com/basenube/iris2bq/raw/master/docs/assets/iris2bq-ra.png">
 </p>
 
 Exactly how again?
@@ -65,7 +65,7 @@ gcloud {
 }
 
 ```
-Up there in the jdbc connection block is where the magic happens for us.  Just specify a list of applicable tables in IRIS for the Namespace you are connecting to (`USER`) and watch the appear in Big Query.
+Up there in the jdbc connection block is where the magic happens for us.  Just specify a list of applicable tables in IRIS for the Namespace you are connecting to (`USER`) and watch them appear in Big Query in our Dataset.
 
 - Run the application specifying the config file:
 ```
